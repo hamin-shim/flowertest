@@ -12,7 +12,7 @@ export default function Process({ result, setResult }) {
     console.log(questionId, answerId);
     const exist = result.filter((e) => e.question !== questionId);
     setResult([...exist, { question: questionId, check: answerId }]);
-    if (id === 9) {
+    if (id === 8) {
       console.log("끝났어요!");
       navigate("/fin");
     } else {
@@ -45,7 +45,7 @@ export default function Process({ result, setResult }) {
         <AnswerBox>
           {data.answer.map((e, i) => (
             <EachAnswer key={i} onClick={() => onAnswerClicked(id, i)}>
-              {e}
+              {e.text}
             </EachAnswer>
           ))}
         </AnswerBox>
@@ -97,6 +97,9 @@ const Percent = styled.div`
 `;
 const Question = styled.div`
   color: ${GREEN};
+  font-size: 25px;
+  padding: 10px 40px;
+  word-break: keep-all;
 `;
 const AnswerBox = styled.div`
   width: 80%;
@@ -104,11 +107,13 @@ const AnswerBox = styled.div`
 const EachAnswer = styled.div`
   cursor: pointer;
   /* display: flex; */
+  font-size: 25px;
   text-align: center;
   background: #dfe6e9;
   border-radius: 30px;
   margin-bottom: 20px;
-  padding: 5px 0;
+  padding: 5px 20px;
+  word-break: keep-all;
   color: black;
   @media screen and (min-width: 780px) {
     :hover {

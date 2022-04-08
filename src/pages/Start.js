@@ -17,7 +17,12 @@ export default function Start() {
     </Container>
   );
 }
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90vh;
+`;
 const Title = styled.h1`
   margin: 0;
 `;
@@ -26,7 +31,9 @@ const STitle = styled.h3`
 `;
 const Img = styled.div`
   width: 100%;
+  max-width: 200px;
   border-radius: 50%;
+  margin: auto;
   overflow: hidden;
   img {
     width: 100%;

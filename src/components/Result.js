@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { GRAY } from "../constants/color";
+import { DARK_GREEN, GRAY, LIGHT_GREEN } from "../constants/color";
 import { ResultData } from "../data/data";
-export default function Result() {
-  const [id, setId] = useState(2);
+export default function Result({ id }) {
+  // const [id, setId] = useState(2);
+  console.log(id);
+  const navigate = useNavigate();
   return (
     <Container>
       <p>당신의 쓰레기 유형은</p>
@@ -37,26 +40,22 @@ export default function Result() {
       <Detail>{ResultData[id].detail}</Detail>
       <Combination>
         <Best>
-          <CombiLabel>
-            나와 찰떡인 쓰레기 / id : {ResultData[id].bestId}
-          </CombiLabel>
+          <CombiLabel>나와 찰떡인 쓰레기</CombiLabel>
           <CombiIcon>
             <img src="/img/trash.jpeg" />
           </CombiIcon>
         </Best>
         <Worst>
-          <CombiLabel>
-            나와 상극인 쓰레기 / id : {ResultData[id].worstId}
-          </CombiLabel>
+          <CombiLabel>나와 상극인 쓰레기</CombiLabel>
           <CombiIcon>
             <img src="/img/trash.jpeg" />
           </CombiIcon>
         </Worst>
       </Combination>
-      {/* <BtnContainer>
-          <ShareBtn>공유하기</ShareBtn>
-          <ReBtn>다시하기</ReBtn>
-        </BtnContainer> */}
+      <BtnContainer>
+        <ShareBtn>공유하기</ShareBtn>
+        <ReBtn onClick={() => navigate("/")}>다시하기</ReBtn>
+      </BtnContainer>
     </Container>
   );
 }
@@ -64,8 +63,9 @@ const Container = styled.div`
   background-image: url("/img/background.png");
   background-size: cover;
   background-position: center;
-  background-color: whitesmoke;
-  height: 100vh;
+  /* background-color: whitesmoke; */
+  min-height: 90vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,20 +82,29 @@ const Title = styled.h1`
 const Detail = styled.div`
   padding: 15px 30px;
   font-size: 20px;
+  word-break: keep-all;
 `;
 const BtnContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
 `;
 const ShareBtn = styled.div`
-  /* width: 80%; */
-  margin: auto;
   text-align: center;
   border-radius: 30px;
-  margin: 20px 0;
+  margin: 10px 30px;
   background-color: ${GRAY};
-  color: white;
+  color: black;
   padding: 5px 20px;
+  :hover {
+    color: white;
+    background: ${LIGHT_GREEN};
+  }
+  :active {
+    color: white;
+    background: ${DARK_GREEN};
+  }
 `;
 const ReBtn = styled(ShareBtn)``;
 const Icon = styled.div`
@@ -115,12 +124,13 @@ const Circle = styled.div``;
 const Label = styled.div``;
 const Combination = styled.div`
   width: 100%;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   display: flex;
   justify-content: space-around;
+  /* background: red; */
 `;
 const Best = styled.div`
-  border: 1px solid black;
+  border: 1px solid ${GRAY};
   padding: 5px 10px;
   display: flex;
   flex-direction: column;
