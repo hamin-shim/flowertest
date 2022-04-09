@@ -1,30 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { DARK_GREEN, GRAY, LIGHT_GREEN } from "../constants/color";
+import Intro from "./Intro";
 
 export default function Start() {
   const navigate = useNavigate();
-  return (
+  const [start, setStart] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setStart(true);
+    }, 4000);
+  }, []);
+  return start ? (
     <Container>
-      <Title>도화테스트</Title>
-      <STitle>당신의 치명적 매력은?</STitle>
+      <Title>쓰레기테스트</Title>
+      <STitle>: 당신은 어떤 쓰레기?</STitle>
       <Img>
-        {/* <img src="https://static.forceteller.com/images/event/dohwa/firstpage_img.png" /> */}
-        <img src="https://imgc.1300k.com/aaaaaib/goods/215024/71/215024713100.jpg?3" />
+        <img
+          src="https://imgc.1300k.com/aaaaaib/goods/215024/71/215024713100.jpg?3"
+          alt="thumbnail"
+        />
       </Img>
       <StartBtn onClick={() => navigate("/test")}>테스트 시작</StartBtn>
     </Container>
+  ) : (
+    <Intro />
   );
 }
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 90vh;
+  padding: 20px 15px;
 `;
-const Title = styled.h1`
+const Title = styled.h2`
   margin: 0;
+  margin-top: 30px;
 `;
 const STitle = styled.h3`
   margin: 0;

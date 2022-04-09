@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import logo from "./logo.svg";
 
-export default function Footer() {
+export default function FooterFin() {
   return (
     <Logo>
       <img src={logo} alt="eloquence logo" />
@@ -10,18 +10,13 @@ export default function Footer() {
   );
 }
 const Logo = styled.div`
-  background-color: white;
-  filter: opacity(80%);
-  position: fixed;
   max-width: 500px;
-  bottom: 0;
   height: 170px;
   display: flex;
   width: 100%;
+  background: url("/img/background_fill.png");
   img {
     height: 100%;
   }
-  bottom: 0;
-  /* border: 1px solid black; */
   justify-content: center;
 `;

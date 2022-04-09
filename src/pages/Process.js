@@ -9,12 +9,10 @@ export default function Process({ result, setResult }) {
   const [id, setId] = useState(0);
   const data = Data[id];
   const onAnswerClicked = (questionId, answerId) => {
-    console.log(questionId, answerId);
     const exist = result.filter((e) => e.question !== questionId);
     setResult([...exist, { question: questionId, check: answerId }]);
     if (id === 8) {
-      console.log("끝났어요!");
-      navigate("/fin");
+      navigate("/loading");
     } else {
       setTimeout(() => setId(id + 1), 200);
     }
@@ -29,7 +27,6 @@ export default function Process({ result, setResult }) {
       }
     }
   };
-  console.log(result);
   return (
     <Container>
       <Top>
@@ -54,18 +51,14 @@ export default function Process({ result, setResult }) {
   );
 }
 const Container = styled.div`
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
-  /* border: 1px solid black; */
-  /* justify-content: center; */
 `;
 const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 10px;
-  /* border: 1px solid black; */
   padding: 10px 0;
   font-size: 20px;
 `;
@@ -73,7 +66,6 @@ const SepBar = styled.div`
   width: 100%;
   height: 10px;
   background: linear-gradient(to right, #ffeaa7, pink);
-  /* background: linear-gradient(to right, #0a541f, #093515); */
 `;
 const Back = styled.div`
   background-color: ${GRAY};
@@ -83,7 +75,6 @@ const Back = styled.div`
 const Name = styled.div``;
 const Content = styled.div`
   height: 60vh;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,13 +82,14 @@ const Content = styled.div`
   margin-top: 20%;
 `;
 const Percent = styled.div`
-  font-size: 50px;
+  font-size: 20px;
   font-weight: bolder;
   color: ${LIGHT_GREEN};
 `;
 const Question = styled.div`
   color: ${GREEN};
   font-size: 25px;
+  font-weight: bolder;
   padding: 10px 40px;
   word-break: keep-all;
 `;
@@ -106,7 +98,6 @@ const AnswerBox = styled.div`
 `;
 const EachAnswer = styled.div`
   cursor: pointer;
-  /* display: flex; */
   font-size: 25px;
   text-align: center;
   background: #dfe6e9;
