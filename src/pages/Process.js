@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { DARK_GREEN, GRAY, GREEN, LIGHT_GREEN } from "../constants/color";
 import { Data } from "../data/data";
+import Intro from "./Intro";
 
 export default function Process({ result, setResult }) {
   const navigate = useNavigate();
   const [id, setId] = useState(0);
   const data = Data[id];
+  const [start, setStart] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setStart(true);
+    }, 4000);
+  }, []);
   const onAnswerClicked = (questionId, answerId) => {
     const exist = result.filter((e) => e.question !== questionId);
     setResult([...exist, { question: questionId, check: answerId }]);
@@ -27,7 +34,7 @@ export default function Process({ result, setResult }) {
       }
     }
   };
-  return (
+  return start ? (
     <Container>
       <Top>
         <Back onClick={onBackClicked}> {"<"}뒤로</Back>
@@ -48,6 +55,8 @@ export default function Process({ result, setResult }) {
         </AnswerBox>
       </Content>
     </Container>
+  ) : (
+    <Intro />
   );
 }
 const Container = styled.div`
@@ -82,7 +91,7 @@ const Content = styled.div`
   margin-top: 20%;
 `;
 const Percent = styled.div`
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bolder;
   color: ${LIGHT_GREEN};
 `;
@@ -103,7 +112,7 @@ const EachAnswer = styled.div`
   background: #dfe6e9;
   border-radius: 30px;
   margin-bottom: 20px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   word-break: keep-all;
   color: black;
   @media screen and (min-width: 780px) {

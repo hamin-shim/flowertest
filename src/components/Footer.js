@@ -5,7 +5,8 @@ import logo from "./logo.svg";
 export default function Footer() {
   return (
     <Logo>
-      <img src={logo} alt="eloquence logo" />
+      {/* <img src={logo} alt="eloquence logo" /> */}
+      <img src="/img/logo_nomargin.png" alt="eloquence logo" />
     </Logo>
   );
 }
@@ -15,7 +16,7 @@ const Logo = styled.div`
   position: fixed;
   max-width: 500px;
   bottom: 0;
-  height: 170px;
+  height: 40px;
   display: flex;
   width: 100%;
   img {

@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { DARK_GREEN, GRAY, LIGHT_GREEN } from "../constants/color";
-import Intro from "./Intro";
 
 export default function Start() {
   const navigate = useNavigate();
-  const [start, setStart] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setStart(true);
-    }, 4000);
-  }, []);
-  return start ? (
+  return (
     <Container>
       <Title>쓰레기테스트</Title>
       <STitle>: 당신은 어떤 쓰레기?</STitle>
@@ -24,8 +17,6 @@ export default function Start() {
       </Img>
       <StartBtn onClick={() => navigate("/test")}>테스트 시작</StartBtn>
     </Container>
-  ) : (
-    <Intro />
   );
 }
 const Container = styled.div`
