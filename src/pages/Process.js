@@ -13,7 +13,7 @@ export default function Process({ result, setResult }) {
   useEffect(() => {
     setTimeout(() => {
       setStart(true);
-    }, 4000);
+    }, 3000);
   }, []);
   const onAnswerClicked = (questionId, answerId) => {
     const exist = result.filter((e) => e.question !== questionId);
