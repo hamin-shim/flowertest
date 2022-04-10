@@ -117,10 +117,10 @@ const ShareBtn = styled.div`
     color: white;
     background: ${LIGHT_GREEN};
   }
-  :active {
+  /* :active {
     color: white;
     background: ${DARK_GREEN};
-  }
+  } */
 `;
 const ReBtn = styled(ShareBtn)``;
 const Icon = styled.div`
