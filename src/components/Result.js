@@ -47,8 +47,7 @@ export default function Result() {
           <CombiLabel>나와 찰떡인 쓰레기</CombiLabel>
           <CombiIcon>
             <img
-              // src={`/img/mbti/${ResultData[id - 1].bestId}.png`}
-              src={`/img/mbti/15.png`}
+              src={`/img/mbti/${ResultData[id - 1].bestId}.png`}
               alt="best combi trash"
             />
           </CombiIcon>
