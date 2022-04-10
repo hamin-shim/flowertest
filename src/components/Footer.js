@@ -15,7 +15,7 @@ const Logo = styled.div`
   filter: opacity(80%);
   position: fixed;
   max-width: 500px;
-  bottom: 0;
+  bottom: 5px;
   height: 40px;
   display: flex;
   width: 100%;

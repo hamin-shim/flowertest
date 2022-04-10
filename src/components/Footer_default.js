@@ -12,7 +12,7 @@ export default function Footer_default() {
 }
 const Logo = styled.div`
   position: fixed;
-  bottom: 0;
+  bottom: 10px;
   max-width: 500px;
   height: 40px;
   display: flex;
