@@ -9,8 +9,7 @@ export default function Intro() {
         textAlign: "center",
       }}
     >
-      지금 여긴 2022년 여름, 당신은 29세 회사원입니다. <br />
-      레드~썬!
+      여가는 2022년 여름, 당신은 회사원입니다... <br />
     </h3>
   );
 }

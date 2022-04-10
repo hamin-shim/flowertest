@@ -1,6 +1,6 @@
 import copy from "copy-to-clipboard";
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { DARK_GREEN, GRAY, LIGHT_GREEN } from "../constants/color";
 import { ResultData } from "../data/data";
@@ -16,7 +16,7 @@ export default function Result() {
       <p>당신의 쓰레기 유형은</p>
       <Title>{ResultData[id - 1].title}</Title>
       <Icon>
-        <img src="/img/trash.jpeg" alt="trash" />
+        <img src={`/img/mbti/${id}.png`} alt="trash" />
       </Icon>
       <RateBox>
         <Rate>
@@ -46,18 +46,28 @@ export default function Result() {
         <Best>
           <CombiLabel>나와 찰떡인 쓰레기</CombiLabel>
           <CombiIcon>
-            <img src="/img/trash.jpeg" alt="best combi trash" />
+            <img
+              src={`/img/mbti/${ResultData[id - 1].bestId}.png`}
+              alt="best combi trash"
+            />
           </CombiIcon>
         </Best>
         <Worst>
           <CombiLabel>나와 상극인 쓰레기</CombiLabel>
           <CombiIcon>
-            <img src="/img/trash.jpeg" alt="worst combi trash" />
+            <img
+              src={`/img/mbti/${ResultData[id - 1].worstId}.png`}
+              alt="worst combi trash"
+            />
           </CombiIcon>
         </Worst>
       </Combination>
       <BtnContainer>
-        <ToBlog>더 많은 글이 보고 싶다면?</ToBlog>
+        <ToBlog>
+          <a href="https://www.instagram.com/eloquence_kr/" target={"_blank"}>
+            지역 환경 문제가 궁금하다면?
+          </a>
+        </ToBlog>
         <ShareBtn onClick={onShareClick}>결과 공유하기</ShareBtn>
         <ReBtn onClick={() => navigate("/")}>나도 해보기</ReBtn>
       </BtnContainer>
@@ -134,7 +144,8 @@ const Combination = styled.div`
   justify-content: space-around;
 `;
 const Best = styled.div`
-  border: 1px solid ${GRAY};
+  border: 3px solid ${GRAY};
+  border-radius: 10px;
   padding: 5px 10px;
   display: flex;
   flex-direction: column;
@@ -153,4 +164,8 @@ const CombiIcon = styled.div`
 const Worst = styled(Best)``;
 const ToBlog = styled(ShareBtn)`
   margin-top: 25px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;

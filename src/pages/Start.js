@@ -10,10 +10,7 @@ export default function Start() {
       <Title>쓰레기테스트</Title>
       <STitle>: 당신은 어떤 쓰레기?</STitle>
       <Img>
-        <img
-          src="https://imgc.1300k.com/aaaaaib/goods/215024/71/215024713100.jpg?3"
-          alt="thumbnail"
-        />
+        <img src="/img/main.png" alt="thumbnail" />
       </Img>
       <StartBtn onClick={() => navigate("/test")}>테스트 시작</StartBtn>
     </Container>
@@ -26,11 +23,11 @@ const Container = styled.div`
   padding: 20px 15px;
 `;
 const Title = styled.h2`
-  margin: 0;
-  margin-top: 30px;
+  margin: 30px 0;
 `;
 const STitle = styled.h3`
   margin: 0;
+  margin-bottom: 20px;
 `;
 const Img = styled.div`
   width: 100%;
@@ -43,7 +40,7 @@ const Img = styled.div`
   }
 `;
 const StartBtn = styled.div`
-  margin-top: 20px;
+  margin-top: 30px;
   background: ${GRAY};
   color: black;
   border-radius: 30px;

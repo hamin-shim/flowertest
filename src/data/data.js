@@ -132,17 +132,15 @@ export const Data = [
 export const ResultData = [
   {
     id: 1,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
-    title: "종이쪼가리",
+    title: "종이 봉투",
     spec: [2, 5, 5],
     detail:
-      "당신은 바로 조용히 날라다니지만, 많은 것을담고 있는 종이쪼가리! 때로 바람에 날려 상처받기도 하지만, 당신의 그런 모습이 때로는 누군가에게 도움이 되기도 한답니다. 이리 저리 치여 구겨지고 찢어질 때가 있어도 자신만의 종이 속 내용을 소중히, 고스란히 간직하는 당신은 바로 종이쪼가리! 재활용이 잘 되지 않아도 어때요, 당신은 귀염력 하나만은  최고의 쓰레기!",
+      "당신은 바로 조용히 날라다니지만, 많은 것을담고 있는 종이봉투! 때로 바람에 날려 상처받기도 하지만, 당신의 그런 모습이 때로는 누군가에게 도움이 되기도 한답니다. 이리 저리 치여 구겨지고 찢어질 때가 있어도 자신만의 종이 속 내용을 소중히, 고스란히 간직하는 당신은 바로 종이봉투! 재활용이 잘 되지 않아도 어때요, 당신은 귀염력 하나만은  최고의 쓰레기!",
     bestId: 6,
     worstId: 3,
   },
   {
     id: 2,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "캔뚜껑",
     spec: [4, 0, 1],
     detail:
@@ -152,7 +150,6 @@ export const ResultData = [
   },
   {
     id: 3,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "찌그러진 음료수 캔",
     spec: [4, 0, 2],
     detail:
@@ -162,7 +159,6 @@ export const ResultData = [
   },
   {
     id: 4,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "스티로폼",
     spec: [1, 2, 4],
     detail:
@@ -172,7 +168,6 @@ export const ResultData = [
   },
   {
     id: 5,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "비닐봉지",
     spec: [0, 3, 1],
     detail:
@@ -182,8 +177,7 @@ export const ResultData = [
   },
   {
     id: 6,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
-    title: "비닐봉지",
+    title: "박x스 병",
     spec: [4, 0, 1],
     detail:
       "사람들에게 비타민을 제공하는 자신의 소임을 다함과 동시에 재활용되어서까지 쓸모를 다하는 당신은 완벽주의자! 당신은 모범 중의 모범 쓰레기로 늘 체계와 일정에 맞게 움직입니다.그 누구보다 책임감이 강한 당신은 항상 질서를 수호하고자 노력하는데요. 혼자 많은 일을 감당하느라 가끔은 고집스럽거나 때로는 성급해 보이기도 합니다. 그러나 솔직하고 똑부러지는 당신의 매력에 주변에서는 당신을 진정한 리더로 생각합니다!  ",
@@ -192,7 +186,6 @@ export const ResultData = [
   },
   {
     id: 7,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "깨진 유리조각",
     spec: [0, 0, 2],
     detail:
@@ -202,7 +195,6 @@ export const ResultData = [
   },
   {
     id: 8,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "휴지, 물티슈",
     spec: [1, 5, 4],
     detail:
@@ -212,7 +204,6 @@ export const ResultData = [
   },
   {
     id: 9,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "책묶음",
     spec: [4, 1, 2],
     detail:
@@ -222,7 +213,6 @@ export const ResultData = [
   },
   {
     id: 10,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "폐박스",
     spec: [4, 1, 1],
     detail:
@@ -232,7 +222,6 @@ export const ResultData = [
   },
   {
     id: 11,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "포장일회용기",
     spec: [0, 0, 2],
     detail:
@@ -242,7 +231,6 @@ export const ResultData = [
   },
   {
     id: 12,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "뽁뽁이",
     spec: [1, 3, 2],
     detail:
@@ -252,7 +240,6 @@ export const ResultData = [
   },
   {
     id: 13,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "우유곽",
     spec: [3, 2, 2],
     detail:
@@ -262,7 +249,6 @@ export const ResultData = [
   },
   {
     id: 14,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "다 쓴 마스크",
     spec: [1, 3, 2],
     detail:
@@ -272,7 +258,6 @@ export const ResultData = [
   },
   {
     id: 15,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "폐건전지",
     spec: [5, 0, 1],
     detail:
@@ -282,7 +267,6 @@ export const ResultData = [
   },
   {
     id: 16,
-    img: "https://static.hubzum.zumst.com/hubzum/2017/04/04/10/e1c2bf57271e4f9f971f69fee35033fb.jpg",
     title: "굴러다니는 전단지",
     spec: [0, 5, 4],
     detail:
