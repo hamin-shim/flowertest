@@ -47,7 +47,8 @@ export default function Result() {
           <CombiLabel>나와 찰떡인 쓰레기</CombiLabel>
           <CombiIcon>
             <img
-              src={`/img/mbti/${ResultData[id - 1].bestId}.png`}
+              // src={`/img/mbti/${ResultData[id - 1].bestId}.png`}
+              src={`/img/mbti/15.png`}
               alt="best combi trash"
             />
           </CombiIcon>
@@ -142,11 +143,12 @@ const Combination = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
+  position: relative;
 `;
 const Best = styled.div`
   border: 3px solid ${GRAY};
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 5px 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -154,9 +156,12 @@ const Best = styled.div`
 `;
 const CombiLabel = styled.div`
   font-size: 20px;
+  position: absolute;
+  top: 5px;
 `;
 const CombiIcon = styled.div`
-  width: 100px;
+  margin-top: 30px;
+  width: 80px;
   img {
     width: 100%;
   }

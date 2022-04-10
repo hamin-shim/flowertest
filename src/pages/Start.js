@@ -32,7 +32,6 @@ const STitle = styled.h3`
 const Img = styled.div`
   width: 100%;
   max-width: 200px;
-  border-radius: 50%;
   margin: auto;
   overflow: hidden;
   img {

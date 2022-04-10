@@ -9,7 +9,7 @@ export default function Intro() {
         textAlign: "center",
       }}
     >
-      여가는 2022년 여름, 당신은 회사원입니다... <br />
+      여기는 2022년 여름, 당신은 회사원입니다... <br />
     </h3>
   );
 }
